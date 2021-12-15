@@ -76,7 +76,7 @@ async def previous_target(sender):
         text1 = f"A whisper message to {name}"
         text2 = "Only he/she can open it."
         mention = f"[{name}](tg://user?id={receiver})"
-        results = [
+        return [
               InlineQueryResultArticle(
                   title=text1,
                   input_message_content=InputTextMessageContent(
@@ -98,8 +98,7 @@ async def previous_target(sender):
               main[0]
         ]
     else:
-        results = main
-    return results
+        return main
 
 
 # Inline System
