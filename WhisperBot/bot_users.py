@@ -18,8 +18,6 @@ async def users_sql(_, msg: Message):
 async def check_for_users(user_ids):
     if isinstance(user_ids, int):
         user_ids = [user_ids]
-    elif isinstance(user_ids, list):
-        pass
     for user_id in user_ids:
         q = SESSION.query(Users).get(user_id)
         if not q:
